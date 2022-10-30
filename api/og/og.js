@@ -1,18 +1,18 @@
-const satori = require('satori').default;
-const { html } = require('satori-html');
-const sharp = require('sharp');
-const fs = require('fs');
-const { Buffer } = require('node:buffer');
+import satori from 'satori';
+import { html } from 'satori-html';
+import sharp from 'sharp';
+import fs from 'fs';
+import { Buffer } from 'node:buffer';
 
 const height = 630;
 const width = 1200;
 
-const fontFile = fs.readFileSync(`${process.cwd()}/public/fonts/Roboto/Roboto-Black.ttf`);
 
-exports.handler = async function() {
+export const handler = async function() {
+  const fontFile = fs.readFileSync(`${process.cwd()}/public/fonts/Roboto/Roboto-Black.ttf`);
   const markup = html(`
     <div style="height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;font-size: 72px;color: white;background: black;">
-      Jhey made some OG
+      Jhey makes OG
       <img src="https://picsum.photos/100/100?random=10">
     </div>
   `)
