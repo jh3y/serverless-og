@@ -2,7 +2,6 @@ import satori from 'satori';
 import { html } from 'satori-html';
 import sharp from 'sharp';
 import fs from 'fs';
-import { Buffer } from 'node:buffer';
 
 const height = 630;
 const width = 1200;

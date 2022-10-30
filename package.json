@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@resvg/resvg-js": "^2.1.0",
     "astro": "^1.6.0",
     "satori": "^0.0.43",
     "satori-html": "^0.3.0",

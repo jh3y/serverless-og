@@ -1,6 +1,6 @@
 import satori from 'npm:satori';
 import { html } from 'npm:satori-html';
-import sharp from 'npm:sharp';
+import { Resvg } from 'npm:@resvg/resvg-js';
 
 const height = 630;
 const width = 1200;
@@ -15,15 +15,20 @@ export default async (request) => {
     width
   });
 
-  const res = await (await sharp(Buffer.from(svg)).png().toBuffer()).toString('base64')
+  const png = new Resvg(svg, {
+    fitTo: {
+      mode: 'width',
+      value: width
+    }
+  }).render().asPng()
 
-  return new Response (res, {
+  return new Response (png, {
     statusCode: 200,
     headers: {
       'Cache-Control': 'public, immutable, no-transform, max-age=31536000',
       'Content-Type': 'image/png',
     },
     isBase64Encoded: true,
-    body: res,
+    // body: png,
   })
 }
