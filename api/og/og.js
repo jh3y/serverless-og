@@ -13,7 +13,6 @@ export const handler = async function() {
   const markup = html(`
     <div style="height: 100%;width: 100%;display: flex;align-items: center;justify-content: center;font-size: 72px;color: white;background: black;">
       Jhey makes OG
-      <img src="https://picsum.photos/100/100?random=10">
     </div>
   `)
   const svg = await satori(markup, {

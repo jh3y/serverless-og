@@ -1,2 +1,6 @@
 [build]
   functions = "api"
+
+[[edge_functions]]
+function = "og-generator"
+path = "/og-gen"
