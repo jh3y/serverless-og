@@ -1,2 +1,2 @@
 [build]
-  functions = "api/"
+  functions = "api"
