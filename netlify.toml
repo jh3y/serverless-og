@@ -1,0 +1,9 @@
+
+
+[[edge_functions]]
+function = "set-res-header"
+path = "/test"
+
+[[edge_functions]]
+function = "hello"
+path = "/test"

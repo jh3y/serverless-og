@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "astro": "^1.6.0",
-    "satori": "^0.0.43"
+    "satori": "^0.0.43",
+    "satori-html": "^0.3.0",
+    "sharp": "^0.31.1"
   }
 }
