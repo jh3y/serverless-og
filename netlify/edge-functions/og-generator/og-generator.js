@@ -1,6 +1,6 @@
-import satori from 'npm:satori';
-import { html } from 'npm:satori-html';
-import sharp from 'npm:sharp';
+import satori from 'https://cdn.skypack.dev/satori';
+import { html } from 'https://cdn.skypack.dev/satori-html';
+import sharp from 'https://cdn.skypack.dev/sharp';
 
 const height = 630;
 const width = 1200;
