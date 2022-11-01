@@ -2,5 +2,5 @@
   functions = "api"
 
 [[edge_functions]]
-function = "og-generator"
-path = "/og-gen"
+function = "og"
+path = "/og"
