@@ -5,6 +5,8 @@ import { initStreaming } from 'https://esm.sh/yoga-wasm-web@0.1.2'
 
 import { initWasm, Resvg } from 'https://esm.sh/@resvg/resvg-wasm@2.0.0-alpha.4'
 
+// const data = await Deno.readFile("image.jpg");
+
 const resvg_wasm = fetch(
   'https://unpkg.com/@vercel/og@0.0.18/vendor/resvg.simd.wasm'
 ).then((res) => res.arrayBuffer())
@@ -145,6 +147,7 @@ export default async function handler(req) {
       async start(controller) {
         await initializedYoga
         await initializedResvg
+
         // const fontData = await fallbackFont;
         const fontData = await desiredFont
 
@@ -162,14 +165,14 @@ export default async function handler(req) {
           ],
         })
 
-        const resvgJS = new Resvg(svg, {
+        const result = new Resvg(svg, {
           fitTo: {
             mode: 'width',
             value: extendedOptions.width,
           },
-        })
+        }).render()
 
-        controller.enqueue(resvgJS.render())
+        controller.enqueue(result)
         controller.close()
       },
     })
