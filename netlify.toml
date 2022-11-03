@@ -4,3 +4,7 @@
 [[edge_functions]]
 function = "og"
 path = "/og"
+
+[[edge_functions]]
+function = "og-sharp"
+path = "/og-sharp"
